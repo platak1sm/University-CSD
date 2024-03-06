@@ -1,0 +1,50 @@
+<h1><u>Permanent Employee Form</u></h1>
+<form id="permForm" name="permForm" onsubmit='addPermanentPOST(); return false;'>
+    <label for="FirstName">First Name:</label>
+    <input type="text" id="FirstName" name="FirstName" required>
+    <br><br>
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" id="LastName" name="LastName" required>
+    <br><br>
+
+    <label  for="Category">Category:</label>
+    <select id="Category" name="Category">     
+        <option value="administrative">Administrative</option>
+        <option value="teaching">Teaching</option>
+    </select>
+
+    <label  for="Married">Married:</label>
+    <select id="Married" name="Married">     
+        <option value="y">Yes</option>
+        <option value="n">No</option>
+    </select>
+
+    <br><br>
+    
+    <label for="Department">Department:</label>
+    <input type="text" id="Department" name="Department" required>
+    <br><br>
+
+    <label for="Street">Street:</label>
+    <input type="text" id="Street" name="Street" required>
+    <br><br>
+
+
+    <label for="StreetNumber">Street Number:</label>
+    <input type="number" id="StreetNumber" name="StreetNumber" required>
+    <br><br>
+
+    <label for="Bank">Bank:</label>
+    <input type="text" id="Bank" name="Bank" required>
+    <br><br>
+
+    <label for="IBAN">IBAN:</label>
+    <input type="text" id="IBAN" name="IBAN" required>
+    <br><br>
+
+    <input type="submit" class="button" id="sub" value="Add">
+</form>
+
+<div id="error"></div>
+

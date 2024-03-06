@@ -1,0 +1,1 @@
+add_library(ask2_4Lib STATIC ask2_4.h ask2_4.cpp) 

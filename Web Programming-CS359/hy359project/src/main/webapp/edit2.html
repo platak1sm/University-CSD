@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<h1><u>Edit Form</u></h1>
+<form id="edit2Form" name="edit2Form" onsubmit='updateLPOST(); return false;'>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
+    <br><br>
+    
+    <label for="pwd">Password:</label>
+    <input type="password" id="pw" name="password"  pattern="(?=.*\d)(?=.*[A-Za-z])(?=.*[#@$!%&*]).{8,12}"
+           title="Must contain at least one number and one symbol and one latin character, and at 8 - 12 characters"
+           onchange="wrpw2()" >
+    <input type="button" id="myBut" onclick="showPass()" value="Show Password"></button>
+    <div id="m2"></div>
+    <br><br>
+
+    <label for="pwc">Password Confirmation:</label>
+    <input type="password" id="pwc" name="pwc"  pattern="(?=.*\d)(?=.*[A-Za-z])(?=.*[#@$!%&*]).{8,12}"
+           title="Must contain at least one number and one symbol and one latin character, and at 8 - 12 characters"
+           onchange="confpw2()">
+    <input type="button" id="myBut2" onclick="showPassConf()" value="Show Password"></button>
+    <div id="message"></div>
+    <br>
+    <label for="url">Enter your Personal Page URL:</label>
+    <input type="url" name="personalpage" id="url" placeholder="https://example.com" pattern="https://.*">
+    <br><br>
+
+    <label id="adstt" for="adst">Street Address:</label>
+    <input type="text" id="adst" name="address" minlength="5" maxlength="50" title="5-50 latin characters">
+    <br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="telephone">
+    <br><br>
+    <input type="submit" class="button" id="sub" value="Submit Changes">
+</form>
+<div id="error"></div>

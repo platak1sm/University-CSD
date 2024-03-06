@@ -1,0 +1,10 @@
+^C:\USERS\PLATA\ONEDRIVE\ΈΓΓΡΑΦΑ\CSD\2 ΕΞΆΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΌς\HW\2\ASKISI2_4\ASK2_4\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4" "-BC:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4/build" --check-stamp-file "C:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4/build/ask2_4/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

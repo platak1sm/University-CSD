@@ -1,0 +1,800 @@
+body {
+    font-family: "Open Sans", sans-serif; /* Use Open Sans font */
+    background-color: rgb(81,74,113);
+    color: #fff;
+  }
+  
+  .inside {
+    font-family: "Open Sans", sans-serif; /* Use Open Sans font */
+    background-image: url("images/bg3.webp");
+    background-size: 10000px 20000px; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: #fff;
+    padding: 13%;
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Position relative for absolute positioning */
+  }
+
+  #big {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #d5d5fa;
+    text-align: left;
+    width: 60%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    margin: 2rem; 
+    background-image: linear-gradient(90deg, #ffffff, #1f101f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 2%; 
+    right: 10%; 
+    text-align: left;
+    height: 125px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px; /* Adjust as needed */
+  }
+  
+  .navbar a:hover {
+    color: #ccc; /* Optional: Change color on hover */
+  }
+
+  .container {
+    margin-top: 8%;
+    padding: 25%;
+    max-width: 100%;
+    position: relative; /* Position relative for absolute positioning */
+  }
+
+  .image-container {
+    position: absolute;
+    top: 40%;
+    left: 50%; /* Position image 50% from the left */
+    animation: rotate 5s linear infinite;
+  }
+
+  .image {
+    max-width: 70%;
+    min-width: 70%;
+    position: relative;
+  }
+
+  .image-container1 {
+    position: absolute;
+    top: 5%;
+    left: 88%; /* Position image 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    animation: pulse 1s ease-in-out infinite alternate;
+  }
+
+  .elliptical-button {
+    background-color: rgb(117, 60, 201); /* Set button background color */
+    border-radius: 27px; /* Create elliptical shape */
+    border: 0.1rem solid rgb(140, 126, 148);
+    font-size: 1.5rem; /* Adjust button text size */
+    color: white; /* Set button text color */
+    padding: 1% 3%; /* Adjust button padding */
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 2%;
+    right: 80%;
+    left: -8%;
+    width: 15rem;
+  }
+  
+  .elliptical-button:hover {
+    background-color: rgb(36, 8, 72); /* Change button color on hover */
+  }
+
+  .circle-button {
+    width: 4.5rem; /* Set width and height to create a circle */
+    height: 4.5rem;
+    display: block;
+    border: 0.1rem solid rgb(140, 126, 148);
+    border-radius: 50%; /* Create a circular shape */
+    background-image: url("images/arrow.png"); /* Set background image */
+    background-size: cover; /* Cover the button with the image */
+    background-position: center; /* Center the image */
+    position: absolute;
+    top: 2%;
+    left: 10%; /* Position image 80% from the right */
+    right: 70%;
+  }
+
+  #circle1 {
+    width: 12%; /* Adjust the width */
+    position: absolute;
+    top: 60%;
+    right: 80%; /* Position image 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+  }
+
+  #scroll {
+    width: 2.5%; /* Adjust the width */
+    position: absolute;
+    top: 45%;
+    right: -5%; /* Position image 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+  }
+
+  #intro {
+    text-align: left;
+    width: 25%;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 75%;
+    right: -12%; 
+    transform: translate(-50%, -50%); /* Center the image */
+  }
+
+  .section-brands {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+  }
+
+  .section-brands1 {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  }
+
+  .elliptical-button1 {
+    padding: 2.5% 7%;
+    border-radius: 10%;
+    cursor: pointer;
+    border: 0.1rem solid rgb(140, 126, 148);
+    background-size: 105% 115%; /* Cover the button with the image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    margin-right: 15px; /* Adjust spacing between buttons */
+    color: #222;
+  }
+
+  .elliptical-button2 {
+    padding: 1.5% 5%;
+    border-radius: 10%;
+    cursor: pointer;
+    border: 0.1rem solid rgb(140, 126, 148);
+    background-size: 100% 115%; /* Cover the button with the image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    margin-right: 5%; /* Adjust spacing between buttons */
+    color: #222;
+  }
+
+  #trust {
+    width: 80%;
+  }
+
+  .section-services {
+    padding-top: 5%;
+    position: relative;
+  }
+
+  #big1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    left: 2%;
+    top: 1%;
+  }
+
+  .circle-button1 {
+    width: 4rem; /* Set width and height to create a circle */
+    height: 4rem;
+    border-radius: 50%; /* Create a circular shape */
+    background-image: url("images/arrowr.png"); /* Set background image */
+    background-size: cover; /* Cover the button with the image */
+    background-position: center; /* Center the image */
+    cursor: pointer; /* Show pointer cursor on hover */
+    position: absolute;
+    top: 13%;
+    right: 5%;
+    border: 0.1rem solid rgb(140, 126, 148);
+  }
+
+  #leftarr {
+    right: 11%;
+    background-image: url("images/arrowl.png"); /* Set background image */
+  }
+
+  .container2 {
+    position: relative;
+    display: flex;
+    margin-top: 10%;
+  }
+
+  .subcontainer {
+    position: relative;
+    background-color: #12082b;
+    width: 48%; 
+    border-radius: 10%;
+    border: 0.2rem solid rgb(22, 1, 34);
+  }
+
+  h3 {
+    text-align: left; 
+    padding-left: 5%; 
+    position: relative;
+  }
+
+  .subcontainer p {
+    padding-top: 20%;
+    font-size: 1.5rem;
+    padding-right: 20%;
+    text-align: left;
+    padding-left: 5%;
+    top: 20%;
+  }
+
+  #web {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 23%;
+  }
+  
+  .elliptical-button3 {
+    background-color: rgb(117, 60, 201); /* Set button background color */
+    color: white; /* Set button text color */
+    padding: 2% 4%; /* Adjust button padding */
+    border-radius: 27px; /* Create elliptical shape */
+    font-size: 1.5rem; /* Adjust button text size */
+    border: 0.1rem solid rgb(140, 126, 148);
+    position: absolute;
+    bottom: 7%;
+    right: 6%;
+  }
+
+  .circle-button11 {
+    width: 4rem; /* Set width and height to create a circle */
+    height: 4rem;
+    border-radius: 50%; /* Create a circular shape */
+    background-image: url("images/arrow.png"); /* Set background image */
+    background-size: cover; /* Cover the button with the image */
+    background-position: center; /* Center the image */
+    border: 0.1rem solid rgb(140, 126, 148);
+    position: absolute;
+    bottom: 7%;
+    right: 6%;
+  }
+
+  .section-services {
+    margin-top: 5%;
+    position: relative;
+  }
+
+  .elliptical-button4 {
+    padding: 1% 2%; 
+    border-radius: 27px; /* Create a circular shape */
+    background-color: #12082b; /* Set background image */
+    border: 0.1rem solid rgb(140, 126, 148);
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10%;
+    top: 12.5%;
+  }
+  
+  .elliptical-button4:hover {
+    background-color: rgb(36, 8, 72); /* Change button color on hover */
+  }
+
+  .container3 {
+    position: relative;
+    display: flex;
+    margin-top: 13%;
+  }
+
+  .container3 h1{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    left: 48%;
+  }
+
+  .container3 p {
+    font-size: 1.5rem;
+  }
+
+  #research {
+    position: absolute;
+    top: 30%;
+    left: 49%;
+  }
+
+  #featured-text {
+    font-size: 1.3rem;
+    text-align: left;
+    position: absolute;
+    bottom: 14%;
+    width: 25%;
+    left: 30%;
+  }
+
+  #project-arrow {
+    left: 60%;
+    top: 38%;
+  }
+
+  #featured-left-arrow {
+    top: 90%; 
+    left: 32%; 
+    width: 3rem; 
+    height: 3rem;
+    right: 11%;
+    background-image: url("images/arrowl.png");
+  }
+
+  #featured-right-arrow {
+    top: 90%; 
+    left: 36%; 
+    width: 3rem; 
+    height: 3rem;
+  }
+
+  .subcontainer2 {
+    position: relative;
+    background-color: #12082b;
+    border-radius: 15%;
+    border: 1px solid rgb(22, 1, 34);
+    background-image: url(images/laptop.png);
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    width: 25rem; 
+    height: 35rem; 
+  }
+
+  .subcontainer3 {
+    position: absolute;
+    background-color: #12082b;
+    border-radius: 15%;
+    border: 1px solid rgb(22, 1, 34);
+    background-image: url(images/phones.png);
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    width: 17rem; 
+    height: 15rem; 
+    top: 52%;
+    right: 10%;
+  }
+
+  .quote {
+    position: absolute;
+    font-weight: 520;
+    font-size: 2rem;
+    text-align:left;
+    background-color: #100523;
+    padding-top: 2%;
+    width: 45%;
+    top: 20%;
+    right: 10%;
+  }
+
+  #quote-arrow-left {
+    right: 11%;
+    background-image: url("images/arrowl.png");
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+
+  #quote-arrow-right {
+    top: 50%;
+    left: 12%;
+  }
+
+  #engineer{
+    margin-top: 5%;
+    height: 4rem;
+  }
+
+  #sosivio{
+    animation: pulse 1s ease-in-out infinite alternate;
+    position: absolute;
+    top: 70%;
+    right: 5%;
+  }
+
+  .section-contact {
+    padding: 8%;
+    position: relative;
+  }
+
+  .contact-title1 {
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    font-size: 5.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  #form-container {
+    position: absolute;
+    top: 35%;
+    right: 15%;
+  }
+
+  #form-button {
+    background-color: transparent;
+    color: whitesmoke;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid;
+  }
+
+  #contact-p {
+    font-size: 1.5rem;
+    margin-top: 20%;
+    margin-left: 20%;
+    text-align: left;
+    width: 30%;
+  }
+
+  .contact-title2 {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    text-align: right;
+    font-size: 5.5rem;
+    font-weight: bold;
+  }
+
+  .imagecont {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%); /* Center the image */
+  
+  }
+
+  #girl {
+    width: 15rem; 
+    height: 16rem;
+  }
+
+  .image-container11 {
+    position: absolute;
+    width: 5rem;
+    top: 77%;
+    left: 60%; /* Position image 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    animation: slideInLeft 2s ease-out infinite;
+  }
+
+  .footer {
+    position: absolute;
+    color: #36343470;
+    font-size: 27rem;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    bottom: -3%;
+    left: 1%;
+  }
+
+  .lighted {
+    color: rgba(245, 245, 245, 0.604);
+  }
+
+  .triangle {
+    border-top: 2rem solid transparent;
+    border-bottom: 6rem solid transparent;
+    border-right: 30rem solid rgba(245, 245, 245, 0.393);
+    position: absolute;
+    left: 45%;
+    margin-top: 10%;
+    
+    transform: translateY(-55%) rotateY(180deg) rotate(-7deg);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.714)); /* Adjust the color and transparency as needed */
+  }
+  
+  .torchobj{
+    width: 10rem;
+    height: 10rem;
+    right: 26%;
+    margin-top: 7%;
+    position: absolute;
+  }
+
+  input[type="email"] {
+    background-color: transparent;
+    border-top: 0px;
+    border-right: 0px;
+    border-left:0px;
+    border-bottom: 2px solid whitesmoke;
+  
+  }
+
+  input[type="email"]::placeholder {
+    color: whitesmoke; /* Change the color of the placeholder text */
+  }
+
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.4);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg); /* Start rotation from 0 degrees */
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg); /* Rotate 360 degrees */
+    }
+  }
+  
+  @keyframes zoom-in {
+    0% {
+      transform: translate(-50%, -50%) scale(1); /* Start with normal scale */
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2); /* Scale to 1.2x at midpoint */
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.5); /* Maintain scale */
+    }
+  }
+  
+  @keyframes zoom-out {
+    0% {
+      transform: translate(-50%, -50%) scale(1.5); /* Start with zoomed scale */
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2); /* Scale to normal at midpoint */
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1); /* Maintain scale */
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-height: 812px) and (min-width: 375px) and (max-width: 600px) {
+    #big {
+      font-size: 2.5rem;
+    }
+
+    .navbar {
+      height: 15%;
+    }
+
+    .navbar ul {
+      line-height: 0.7;
+    }
+
+    .navbar a {
+      font-size: 6px;
+    }
+
+    .image {
+      max-width: 80%;
+      min-width: 80%;
+    }
+
+    .elliptical-button {
+      display: block;
+      font-size: 0.5rem;
+      width: 5rem;
+    }
+
+    .circle-button {
+      top: 3%;
+      left: 12%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    #intro {
+      font-size: 0.4rem;
+      width: 30%;
+      left: 85%;
+    }
+
+    #big1 {
+      font-size: 2rem;
+      position: absolute;
+      margin: 0;
+    }
+
+    .circle-button1 {
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 5%;
+   
+    }
+
+    .subcontainer {
+      margin-top: 0
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      top: -5%;
+    }
+
+    #web {
+      width: 20%;
+    }
+
+    .subcontainer p {
+      font-size: 0.5rem;
+    }
+
+    .elliptical-button3 {
+      display: block;
+      font-size: 0.5rem;
+      width: 3rem;
+    }
+
+    .circle-button11 {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    .elliptical-button4 {
+      display: block;
+      font-size: 0.5rem;
+      width: 5rem;
+      top: 12%;
+    }
+
+    .container3 h1 {
+      font-size: 2rem;
+    }
+
+    .subcontainer2 {
+      width: 8rem;
+      height: 12rem;
+      left: 2%;
+    }
+
+    .subcontainer3 {
+      width: 8rem;
+      height: 6rem;
+    }
+
+    .container3 h1 {
+      font-size: 1.3rem;
+      top: -12%;
+    }
+
+    #research {
+      font-size: 0.5rem;
+    }
+
+    #featured-text {
+      font-size: 0.4rem;
+      width: 30%;
+      padding-left: 1%;
+      margin-bottom: 0;
+    }
+
+    #featured-button {
+      top: 12.5%
+    }
+
+    #featured-left-arrow {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    #featured-right-arrow {
+      width: 1.1rem;
+      height: 1.1rem;
+      left: 38%
+    }
+
+    .quote {
+      font-size: 0.8rem;
+    }
+
+    #engineer {
+      height: 3rem;
+    }
+
+    #sosivio {
+      width: 2rem;
+    }
+
+    .contact-title1 {
+      font-size: 2.5rem;
+    }
+
+    .contact-title2 {
+      font-size: 2.5rem;
+      top: 35%;
+    }
+
+    input {
+      width: 7rem;
+      height: 1.5rem;
+    }
+
+    #form-container {
+      top: 28%;
+      right: 10%
+    }
+
+    .imagecont {
+      top: 75%;
+    }
+
+    #girl {
+      width: 8rem;
+      height: 10rem;
+    }
+
+    #contact-p {
+      padding-left: 10%;
+      font-size: 0.6rem;
+      left: 65%;
+    }
+
+    .image-container11 {
+      width: 3rem;
+    }
+
+    .footer {
+      font-size: 10rem;
+    }
+
+    .triangle {
+      border-top: 0.8rem solid transparent;
+      border-bottom: 2rem solid transparent;
+      border-right: 15rem solid rgba(245, 245, 245, 0.393);
+      padding-top: 1rem;
+      margin-top: 6%;
+    }
+
+    .torchobj {
+      width: 5rem;
+      height: 5rem;
+      right: 18%;
+      /* margin-bottom: 50%; */
+      bottom: 0.8%;
+    }
+
+  }

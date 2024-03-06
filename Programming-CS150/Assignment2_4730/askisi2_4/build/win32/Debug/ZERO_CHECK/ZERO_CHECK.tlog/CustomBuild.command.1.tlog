@@ -1,0 +1,10 @@
+^C:\USERS\PLATA\ONEDRIVE\ΈΓΓΡΑΦΑ\CSD\2 ΕΞΆΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΌς\HW\2\ASKISI2_4\BUILD\CMAKEFILES\060936A42C35F05803DBD2D57C8F6593\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4" "-BC:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/plata/OneDrive/Έγγραφα/CSD/2 Εξάμηνο/Προγραμματισμός/hw/2/askisi2_4/build/askisi2_4.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

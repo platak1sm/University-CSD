@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="myStyle.css">
+    <script src="initBoard.js"></script>
+    <script src="game.js"></script>
+</head>
+
+<body onload=initBoard()>
+    <h1 id="wel">Welcome, please give the names of the players.</h1>
+    <form name="myForm" action="/action_page.php" id="forms">
+        <label for="p1">Player 1: </label>
+        <input type="text" id="p1" name="p1" required>
+        <br><br>
+        <label for="p2">Player 2:</label>
+        <input type="text" id="p2" name="p2" required>
+        <br><br>
+        <input type="button" value="Start!" onclick="start()">
+    </form>
+    <div id="win" hidden=true></div>
+
+    <div id="mainTable" hidden=true></div>
+
+    <div id="ib" hidden=true>
+        <div class="column column3Width ">
+            <h1><u>Infobox</u></h1>
+            <div id="turn">Turn: </div>
+            <div id="dice">
+                <button type="button" id="diceb" onclick="play()" disabled>
+                    <img src="ImagesDice/dice.gif" id="diceim" alt="buttonpng" />
+                </button>
+            </div>
+            <div id="pytheff">Python Effect: </div>
+        </div>
+    </div>
+
+    <button id="firstb" hidden=true onclick="randomforturn()">Lets see which player will begin!</button>
+
+
+</html>

@@ -1,0 +1,48 @@
+<h1><u>Edit Form</u></h1>
+<form id="editForm" name="editForm" onsubmit='editPOST(); return false;'>
+    <label for="eid">Please give the EID:</label>
+    <input type="number" id="eid" name="eid" required>
+    <br><br>
+    <br><br>
+
+    <label for="FirstName">First Name:</label>
+    <input type="text" id="FirstName" name="FirstName" >
+    <br><br>
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" id="LastName" name="LastName" >
+    <br><br>
+
+    <label  for="Married">Married:</label>
+    <select id="Married" name="Married">     
+        <option value="y">Yes</option>
+        <option value="n">No</option>
+    </select>
+
+    <br><br>
+
+    <label for="Department">Department:</label>
+    <input type="text" id="Department" name="Department" >
+    <br><br>
+
+    <label for="Street">Street:</label>
+    <input type="text" id="Street" name="Street" >
+    <br><br>
+
+
+    <label for="StreetNumber">Street Number:</label>
+    <input type="number" id="StreetNumber" name="StreetNumber" >
+    <br><br>
+
+    <label for="Bank">Bank:</label>
+    <input type="text" id="Bank" name="Bank" >
+    <br><br>
+
+    <label for="IBAN">IBAN:</label>
+    <input type="text" id="IBAN" name="IBAN" >
+    <br><br>
+
+    <input type="submit" class="button" id="sub" value="Submit changes">
+</form>
+
+<div id="error"></div>

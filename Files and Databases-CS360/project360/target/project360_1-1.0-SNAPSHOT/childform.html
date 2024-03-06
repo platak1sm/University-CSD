@@ -1,0 +1,22 @@
+<h1><u>Child Form</u></h1>
+<form id="childForm" name="childForm" onsubmit='addChildPOST(); return false;'>
+    <label for="eid">EID of parent:</label>
+    <input type="number" id="eid" name="eid" required>
+    <br><br>
+    
+    <label for="FirstName">First Name:</label>
+    <input type="text" id="FirstName" name="FirstName" required>
+    <br><br>
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" id="LastName" name="LastName" required>
+    <br><br>
+
+    <label for="Birthday">Birthday:</label>
+    <input type="date" id="Birthday" name="Birthday" min="1980-01-01" required>
+    <br><br>
+
+    <input type="submit" class="button" id="sub" value="Add">
+</form>
+
+<div id="error"></div>

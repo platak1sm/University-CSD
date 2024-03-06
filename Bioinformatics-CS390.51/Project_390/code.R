@@ -1,0 +1,198 @@
+library(foreach)
+
+# Calculate the number of differences (k) between two sequences i and j
+calculate_k <- function(seq_i, seq_j) {
+  k <- sum(unlist(seq_i) != unlist(seq_j))
+  return(k)
+}
+
+# Calculate the total number of pairs (n choose 2)
+calculate_total_pairs <- function(n) {
+  total_pairs <- choose(n, 2)
+  return(total_pairs)
+}
+
+# Calculate the average number of differences (k) per pair of sequences
+calculate_avg_differences <- function(data) {
+  n <- length(data)
+  total_pairs <- calculate_total_pairs(n)
+
+  k_sum <- 0
+  for (i in 1:(n-1)) {
+    for (j in (i+1):n) {
+      k_sum <- k_sum + calculate_k(data[i], data[j])
+    }
+  }
+  
+  k_avg <- k_sum / total_pairs
+  return(k_avg)
+}
+
+
+calculate_a1 <- function(n) {
+  a1 <- sum(1 / seq_len(n-1))
+  return(a1)
+}
+
+calculate_W <- function(S, a1) {
+  W <- S / a1
+  return(W)
+}
+
+
+calculate_D <- function(k, W, S, n) {
+  a1 <- sum(1 / seq_len(n-1))
+  a2 <- (sum(1 / seq_len(n-1)^2) - sum(1 / seq_len(n-1))) / ((n-1) * (n-2))
+  
+  b1 <- (n + 1) / (3 * (n - 1))
+  b2 <- (2 * (n^2 + n + 3)) / (9 * n * (n - 1))
+  
+  c1 <- b1 - 1 / a1
+  c2 <- b2 - (n + 2) / (a1 * n) + (a2 / a1^2)
+  
+  e1 <- c1 / a1
+  e2 <- c2 / (a1^2 + a2)
+  
+  D <- (k - W) / sqrt((e1 * S) + (e2 * S * (S - 1)))
+  
+  return(D)
+}
+
+standarize_data <- function(vec, mean_vec, std_vec){
+  result <- foreach(i = 1:length(vec)) %do% {
+    (vec[i] - mean_vec) / std_vec
+  }
+  
+  output <- numeric(length(vec))
+  output[1:length(vec)] <- result
+  
+  return(output)
+}
+
+euclidian_distances <- function(k_stand, W_stan, D_stand,k0_stand, W0_stand, D0_stand) {
+  result <- foreach(i = seq_along(k_stand)) %do% {
+    sqrt((D0_stand - D_stand[[i]])^2 + (W0_stand - W_stand[[i]])^2 + (k0_stand - k_stand[[i]])^2)
+  }
+  
+  output <- numeric(length(k_stand))
+  output[1:length(k_stand)] <- result
+  return(output)
+}
+
+smallest_distances <- function(d){
+  vec <- unlist(d)
+  
+  sorted_indexes <- order(vec)
+  
+  selected_indexes <- head(sorted_indexes, 500)
+  
+  smallest_d <- vec[selected_indexes]
+  
+  result <- list(list1 = smallest_d, list2 = selected_indexes)
+  return(result)
+}
+
+
+wd<- getwd()
+
+path<- file.path(wd, "dataSets/ms_obs_final.out")
+
+# Read the file into a vector of strings
+data_vector <- readLines(path)
+
+# Create a list of vectors
+ms_obs <- lapply(data_vector, function(line) {
+  binary_string <- strsplit(line, "")[[1]]
+  binary_vector <- as.numeric(binary_string)
+  binary_vector
+})
+
+# Print the list of vectors
+print(ms_obs)
+
+k_0 = calculate_avg_differences(ms_obs)
+n_0 = length(ms_obs)
+a1_0 = calculate_a1(n_0)
+a1_0
+S_0 = length(ms_obs[[1]])
+S_0
+W_0 = calculate_W(S_0, a1_0)
+W_0
+D_0 = calculate_D(k_0, W_0, S_0, n_0)
+D_0
+
+
+#Calculate the statistics for the ms_sim_final
+path<- file.path(wd, "dataSets/ms_sim_final.out")
+
+con <- file(path, "r")
+
+lines <- c()
+k <- c()
+W <- c()
+D <- c()
+
+while (!isIncomplete(con)) {
+  line <- readLines(con, n = 1)
+  #print(line)
+  
+  # Check for an empty line
+  if(length(line) == 0)
+    break
+  else if (line == "") {
+    ms_sim <- lapply(lines, function(line) {
+      binary_string <- strsplit(line, "")[[1]]
+      binary_vector <- as.numeric(binary_string)
+      binary_vector
+    })
+    
+    k <- c(k, calculate_avg_differences(ms_sim))
+    n = length(ms_sim)
+    a1 = calculate_a1(n)
+    S = length(ms_sim[[1]])
+    W <- c(W, calculate_W(S, a1))
+    D <- c(D, calculate_D(k[length(k)], W[length(W)], S, n))
+    
+    lines <- c()
+  }else{
+    lines <- c(lines, line)
+  }
+}
+
+close(con)
+
+mean_k <- mean(k)
+std_k <- sd(k)
+
+mean_W <- mean(W)
+std_W <- sd(W)
+
+mean_D <- mean(D)
+std_D <- sd(D)
+
+k_stand <- standarize_data(k, mean_k, std_k)
+W_stand <- standarize_data(W, mean_W, std_W)
+D_stand <- standarize_data(D, mean_D, std_D)
+
+k0_stand <- (k_0 - mean_k) / std_k
+W0_stand <- (W_0 - mean_W) / std_W
+D0_stand <- (D_0 - mean_D) / std_D
+
+d <- euclidian_distances(k_stand, W_stan, D_stand,k0_stand, W0_stand, D0_stand)
+
+output <- smallest_distances(d)
+
+smallest_d <- output$list1
+indexes <- output$list2
+
+
+pars_final <- scan("dataSets/pars_final.txt", sep="\n")
+
+pars_selected <- pars_final[indexes]
+
+mean_pars <- mean(pars_selected)
+median_pars <- median(pars_selected)
+
+hist(pars_selected)
+plot(density(pars_selected), main = "Density Plot")
+

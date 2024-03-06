@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\plata\OneDrive\Έγγραφα\CSD\2 Εξάμηνο\Προγραμματισμός\hw\2\askisi2_4\build\CMakeFiles\060936a42c35f05803dbd2d57c8f6593\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{30C04C2B-28CF-3210-9F3E-3E7090349D74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

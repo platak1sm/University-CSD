@@ -1,0 +1,118 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 Nov 2022, 00:12:59
+    Author     : plata
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+table, tr{
+    border: 2px solid black;
+
+}
+.row {
+    width:100%;
+
+}
+
+img{
+    width:50px;
+    height:70px;
+}
+
+.column {
+    display:inline-block;
+    float: left;
+    padding: 1px;
+    /* 	text-align: center;*/
+    border: 5px solid black;
+    border-radius: 8px;
+    margin-right:2%;
+    margin-left:2%;
+    min-height:400px;
+}
+
+.column1Width {
+    width: 30%;
+}
+
+
+.column2Width {
+    width: 60%;
+}
+
+.subColumn {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 8px;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.row:after {
+    content: "";
+}
+
+
+
+h2{
+    text-align: center;
+}
+
+.button {
+    background-color: #ffffff; 
+    border: 5px solid black;
+    border-radius: 8px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom:10px;
+}
+
+.topnav button {
+    float: left;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav button:hover {
+    background-color: #333;
+    color: black;
+}
+
+.topnav button.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+footer{
+    align-self: center;
+    margin-top: auto;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

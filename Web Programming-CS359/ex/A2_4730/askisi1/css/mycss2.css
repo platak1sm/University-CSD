@@ -1,0 +1,17 @@
+body {
+    background-color: tan;
+    padding-left: 10px;
+}
+
+input {
+    margin: .4rem;
+}
+
+#center {
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 15em;
+    height: 2em;
+}
